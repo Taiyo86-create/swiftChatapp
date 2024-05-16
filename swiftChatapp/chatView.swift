@@ -10,15 +10,18 @@ import SwiftUI
 struct chatView: View {
     var body: some View {
         VStack{
-            ScrollView{
-                VStack{
-                    HStack{
-                        Circle()
-                            .frame(width: 60, height: 60)
-                        Capsule()
-                            .frame(height: 60)
+                ScrollView{
+                    VStack{
+                        ForEach(0..<5){ _ in
+                        HStack{
+                            Circle()
+                                .frame(width: 60, height: 60)
+                            Capsule()
+                                .frame(height: 60)
+                        }
                     }
-                }
+            }
+            
             }.background(.cyan)
         }
     }
