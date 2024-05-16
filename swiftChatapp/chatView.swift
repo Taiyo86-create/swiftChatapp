@@ -11,11 +11,8 @@ struct chatView: View {
     var body: some View {
         VStack(spacing: 0){
                messageArea
-                .overlay(
-                    navigationArea
-                    ,alignment: .top
-                )
-            inputArea
+                .overlay(navigationArea ,alignment: .top)
+               inputArea
         }
     }
 }
