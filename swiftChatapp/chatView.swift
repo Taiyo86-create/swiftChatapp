@@ -29,13 +29,8 @@ extension chatView{
         ScrollView{
             VStack(spacing: 0){
                 ForEach(0..<5){ _ in
-                    HStack{
-                        Circle()
-                            .frame(width: 60, height: 60)
-                        Capsule()
-                            .frame(height: 60)
-                    }
-                    .padding(.bottom)
+                    MessageRow()
+                    
                 }
             }
             .padding(.horizontal)
