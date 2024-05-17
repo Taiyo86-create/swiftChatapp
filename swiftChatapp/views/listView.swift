@@ -9,12 +9,16 @@ import SwiftUI
 
 struct listView: View {
     var body: some View {
+        NavigationView{
         VStack{
             header
             list
         }
         .padding(.horizontal)
     }
+        
+    }
+        
         
 }
 
@@ -42,9 +46,14 @@ extension listView{
         ScrollView{
             VStack{
                 ForEach(0..<5){_ in
-                    listRow
+                    NavigationLink {
+                        chatView()
+                            .toolbar(.hidden)
+                    } label: {
+                        listRow
+                    }
                 }
-            }
+              }
         }
     }
     
@@ -56,6 +65,7 @@ extension listView{
                 .clipShape(Circle())
             VStack(alignment: .leading){
                 Text("タイトル")
+                    .foregroundColor(.primary)
                 Text("最新のメッセージ")
                     .font(.footnote)
                     .foregroundColor(Color(uiColor: .secondaryLabel))
