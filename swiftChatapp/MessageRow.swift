@@ -9,18 +9,22 @@ import SwiftUI
 
 struct MessageRow: View {
     var body: some View {
-        HStack{
+        HStack(alignment: .top){
             Image(systemName: "person.circle")
                 .resizable()
                 .frame(width: 48, height: 48)
-            Text("こんにちは")
+            Text("こんにちは こんにちは こんにちは こんにちは こんにちは こんにちは こんにちは")
                 .padding()
                 .background(.white)
                 .cornerRadius(30)
             VStack(alignment: .trailing){
+                Spacer()
                 Text("既読")
                 Text(timeStamp)
             }
+            .foregroundColor(.secondary)
+            .font(.footnote)
+            Spacer()
             
         }
         .padding(.bottom)
