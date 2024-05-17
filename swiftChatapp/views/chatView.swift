@@ -37,7 +37,7 @@ extension chatView{
             .padding(.horizontal)
             .padding(.top, 72 )
             
-        }.background(.cyan)
+        }.background(Color("Background"))
     }
     
     private var inputArea: some View{
@@ -64,8 +64,9 @@ extension chatView{
 
             Image(systemName: "mic")
                 .font(.title2)
-        }.background(.white)
-            .padding()
+        }.background(Color(uiColor: .systemBackground))
+            .padding(.horizontal)
+            .padding(.vertical, 8)
     }
     
     private var navigationArea: some View{
@@ -83,6 +84,6 @@ extension chatView{
             .font(.title2)
         }
             .padding()
-            .background(.cyan.opacity(0.9))
+            .background(Color("Background").opacity(0.9))
     }
 }
