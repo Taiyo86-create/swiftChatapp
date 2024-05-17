@@ -59,8 +59,8 @@ extension chatView{
     
     private var navigationArea: some View{
         HStack{
-            Circle()
-                .frame(width: 40, height: 40)
+            Image(systemName: "chevron.backward")
+                .font(.title2)
             Text("Titile")
             Spacer()
             Circle()
