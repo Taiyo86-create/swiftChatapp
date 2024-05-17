@@ -16,6 +16,8 @@ struct Chat: Decodable, Identifiable{
         return recentMessage.text
     }
     
+    
+    
     var recentMessageDateString: String{
         guard let recentMessage = self.messages.last else{return ""}
         let formatter = DateFormatter()
