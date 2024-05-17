@@ -29,7 +29,6 @@ extension listView{
             Text("トーク")
                 .font(.title2.bold())
             Spacer()
-            
             HStack(spacing: 16){
                 Image(systemName: "text.badge.checkmark")
                 Image(systemName: "square")
@@ -51,8 +50,10 @@ extension listView{
     
     private var listRow: some View{
         HStack{
-            Circle()
-                .frame(width: 60, height: 60)
+            Image("megaRcario")
+                .resizable()
+                .frame(width: 48, height: 48)
+                .clipShape(Circle())
             VStack(alignment: .leading){
                 Text("タイトル")
                 Text("最新のメッセージ")
