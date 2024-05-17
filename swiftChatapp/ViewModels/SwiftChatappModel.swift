@@ -39,7 +39,12 @@ class ChatViewModel{
 
     }
     
-    func aggMessage(){
-        print ("データを追加します")
+    func aggMessage(text: String){
+        let newMessage = Message(
+            id: UUID().uuidString,
+            text: text,
+            user: User.currentUser,
+            date: Date().description,
+            readed: false)
     }
 }
