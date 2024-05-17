@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct chatView: View {
+    
+    @FocusState private var textFieldFocused: Bool
+    
     @State private var textFieldText: String = ""
-    let vm: ChatViewModel = ChatViewModel()
+    @ObservedObject var vm: ChatViewModel = ChatViewModel()
     var body: some View {
         VStack(spacing: 0){
                messageArea
@@ -38,6 +41,9 @@ extension chatView{
             .padding(.top, 72 )
             
         }.background(Color("Background"))
+            .onTapGesture {
+                textFieldFocused = false
+            }
     }
     
     private var inputArea: some View{
@@ -65,6 +71,7 @@ extension chatView{
                 .onSubmit {
                     sendMessage()
                 }
+                .focused($textFieldFocused)
 
             Image(systemName: "mic")
                 .font(.title2)
@@ -92,6 +99,9 @@ extension chatView{
     }
     
     private func sendMessage(){
-        vm.aggMessage(text: textFieldText)
+        if !textFieldText.isEmpty{
+            vm.aggMessage(text: textFieldText)
+            textFieldText = ""
+        }
     }
 }
