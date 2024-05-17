@@ -14,6 +14,7 @@
 		FC02942E2BF7134A00528B0C /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02942D2BF7134A00528B0C /* MessageRow.swift */; };
 		FC0294322BF71F0000528B0C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0294312BF71F0000528B0C /* user.swift */; };
 		FC0294342BF71F7800528B0C /* DataTset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0294332BF71F7800528B0C /* DataTset.swift */; };
+		FC0294362BF720D200528B0C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0294352BF720D200528B0C /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FC02942D2BF7134A00528B0C /* MessageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
 		FC0294312BF71F0000528B0C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		FC0294332BF71F7800528B0C /* DataTset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTset.swift; sourceTree = "<group>"; };
+		FC0294352BF720D200528B0C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0294312BF71F0000528B0C /* user.swift */,
+				FC0294352BF720D200528B0C /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				FC0294322BF71F0000528B0C /* user.swift in Sources */,
 				FC0294242BF650D000528B0C /* chatView.swift in Sources */,
 				FC0294342BF71F7800528B0C /* DataTset.swift in Sources */,
+				FC0294362BF720D200528B0C /* Message.swift in Sources */,
 				FC0294162BF64EBB00528B0C /* swiftChatappApp.swift in Sources */,
 				FC02942E2BF7134A00528B0C /* MessageRow.swift in Sources */,
 			);
