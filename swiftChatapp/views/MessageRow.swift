@@ -39,7 +39,7 @@ extension MessageRow {
     }
     
     private var messageText: some View{
-        Text("こんにちは こんにちは こんにちは こんにちは こんにちは こんにちは こんにちは")
+        Text(message.text)
             .padding()
             .background(.white)
             .cornerRadius(30)
