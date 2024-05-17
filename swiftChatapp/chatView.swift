@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct chatView: View {
+    @State private var textFieldText: String = ""
     var body: some View {
         VStack(spacing: 0){
                messageArea
@@ -22,10 +23,12 @@ struct chatView: View {
 }
 
 extension chatView{
+    
+    
     private var messageArea: some View{
         ScrollView{
             VStack(spacing: 0){
-                ForEach(0..<30){ _ in
+                ForEach(0..<5){ _ in
                     HStack{
                         Circle()
                             .frame(width: 60, height: 60)
@@ -43,16 +46,28 @@ extension chatView{
     
     private var inputArea: some View{
         HStack{
-            Circle()
-                .frame(width: 40, height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
-            Capsule()
-                .frame(height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
+            HStack{
+                Image(systemName: "plus")
+                Image(systemName: "camera")
+                Image(systemName: "photo")
+            }
+            .font(.title2)
+            TextField("Aa", text: $textFieldText)
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .clipShape(Capsule())
+                .overlay(
+                    Image(systemName: "face.smiling"
+                        
+                   )
+                    .font(.title2)
+                    .padding(.trailing)
+                    .foregroundColor(.gray)
+                , alignment: .trailing
+                )
+
+            Image(systemName: "mic")
+                .font(.title2)
         }.background(.white)
             .padding()
     }
