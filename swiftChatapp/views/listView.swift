@@ -30,16 +30,12 @@ extension listView{
                 .font(.title2.bold())
             Spacer()
             
-            HStack{
-                Circle()
-                    .frame(width: 40, height: 40)
-                
-                Circle()
-                    .frame(width: 40, height: 40)
-                
-                Circle()
-                    .frame(width: 40, height: 40)
+            HStack(spacing: 16){
+                Image(systemName: "text.badge.checkmark")
+                Image(systemName: "square")
+                Image(systemName: "ellipsis.bubble")
             }
+            .font(.title2)
         }
     }
     
@@ -47,22 +43,26 @@ extension listView{
         ScrollView{
             VStack{
                 ForEach(0..<5){_ in
-                    HStack{
-                        Circle()
-                            .frame(width: 60, height: 60)
-                        VStack(alignment: .leading){
-                            Text("タイトル")
-                            Text("最新のメッセージ")
-                                .font(.footnote)
-                                .foregroundColor(Color(uiColor: .secondaryLabel))
-                        }
-                        Spacer()
-                        Text("12/31")
-                            .font(.caption)
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
+                    listRow
                 }
             }
+        }
+    }
+    
+    private var listRow: some View{
+        HStack{
+            Circle()
+                .frame(width: 60, height: 60)
+            VStack(alignment: .leading){
+                Text("タイトル")
+                Text("最新のメッセージ")
+                    .font(.footnote)
+                    .foregroundColor(Color(uiColor: .secondaryLabel))
+            }
+            Spacer()
+            Text("12/31")
+                .font(.caption)
+                .foregroundColor(Color(uiColor: .secondaryLabel))
         }
     }
 }
