@@ -29,9 +29,10 @@ struct MessageRow: View {
 
 extension MessageRow {
     private var userTumb: some View{
-        Image(systemName: "person.circle")
+        Image("megaRcario")
             .resizable()
             .frame(width: 48, height: 48)
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
     }
     
     private var messageText: some View{
