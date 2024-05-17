@@ -62,13 +62,16 @@ extension chatView{
             Image(systemName: "chevron.backward")
                 .font(.title2)
             Text("Titile")
+                .font(.title2.bold())
             Spacer()
-            Circle()
-                .frame(width: 40, height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
-        }.foregroundColor(.white)
+            HStack(spacing: 16){
+                Image(systemName: "text.magnifyingglass")
+                Image(systemName: "phone")
+                Image(systemName: "line.3.horizontal")
+            }
+            .font(.title2)
+        }
             .padding()
-            .background(.black.opacity(0.5))
+            .background(.cyan.opacity(0.9))
     }
 }
