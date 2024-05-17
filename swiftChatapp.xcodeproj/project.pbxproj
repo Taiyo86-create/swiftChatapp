@@ -54,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0294152BF64EBB00528B0C /* swiftChatappApp.swift */,
+				FC02942F2BF71E9900528B0C /* models */,
 				FC0294232BF650D000528B0C /* chatView.swift */,
 				FC02942D2BF7134A00528B0C /* MessageRow.swift */,
 				FC0294192BF64EBD00528B0C /* Assets.xcassets */,
@@ -68,6 +69,13 @@
 				FC02941C2BF64EBD00528B0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC02942F2BF71E9900528B0C /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
