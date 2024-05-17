@@ -71,6 +71,7 @@ extension listView{
                     .foregroundColor(.primary)
                 Text(chat.recentMessageText)
                     .font(.footnote)
+                    .lineLimit(1)
                     .foregroundColor(Color(uiColor: .secondaryLabel))
             }
             Spacer()
