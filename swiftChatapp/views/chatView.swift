@@ -61,6 +61,10 @@ extension chatView{
                     .foregroundColor(.gray)
                 , alignment: .trailing
                 )
+            
+                .onSubmit {
+                    sendMessage()
+                }
 
             Image(systemName: "mic")
                 .font(.title2)
@@ -85,5 +89,9 @@ extension chatView{
         }
             .padding()
             .background(Color("Background").opacity(0.9))
+    }
+    
+    private func sendMessage(){
+        vm.aggMessage()
     }
 }

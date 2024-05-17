@@ -38,4 +38,8 @@ class ChatViewModel{
         }
 
     }
+    
+    func aggMessage(){
+        print ("データを追加します")
+    }
 }
