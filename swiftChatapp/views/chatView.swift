@@ -51,6 +51,9 @@ extension chatView{
                 .onAppear{
                     scrollToLast(proxy: proxy)
                 }
+                .onChange(of: chat.messages) {
+                    scrollToLast(proxy: proxy)
+                }
         }
         
     }
@@ -122,7 +125,9 @@ extension chatView{
     }
     private func scrollToLast(proxy: ScrollViewProxy){
         if let lastMessage = chat.messages.last {
-            proxy.scrollTo(lastMessage.id, anchor: .bottom)
+            withAnimation(.smooth){
+                proxy.scrollTo(lastMessage.id, anchor: .bottom)
+            }
         }
     }
 }
