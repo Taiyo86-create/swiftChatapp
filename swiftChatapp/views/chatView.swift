@@ -29,8 +29,8 @@ extension chatView{
     private var messageArea: some View{
         ScrollView{
             VStack(spacing: 0){
-                ForEach(0..<5){ _ in
-                    MessageRow()
+                ForEach(vm.messages){ message in
+                    MessageRow(message: message)
                     
                 }
             }

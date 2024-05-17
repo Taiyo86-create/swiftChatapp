@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MessageRow: View {
+    
+    let message: Message
+    
     var body: some View {
         HStack(alignment: .top){
             userTumb
@@ -21,15 +24,15 @@ struct MessageRow: View {
     
 }
 
-#Preview {
-    MessageRow()
-        .background(.cyan)
-}
+//#Preview {
+//    MessageRow()
+//        .background(.cyan)
+//}
 
 
 extension MessageRow {
     private var userTumb: some View{
-        Image("megaRcario")
+        Image(message.user.image)
             .resizable()
             .frame(width: 48, height: 48)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
