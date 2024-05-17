@@ -10,8 +10,9 @@ import SwiftUI
 struct MessageRow: View {
     var body: some View {
         HStack{
-            Circle()
-                .frame(width: 60, height: 60)
+            Image(systemName: "person.circle")
+                .resizable()
+                .frame(width: 48, height: 48)
             Capsule()
                 .frame(height: 60)
         }
