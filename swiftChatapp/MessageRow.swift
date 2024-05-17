@@ -13,13 +13,26 @@ struct MessageRow: View {
             Image(systemName: "person.circle")
                 .resizable()
                 .frame(width: 48, height: 48)
-            Capsule()
-                .frame(height: 60)
+            Text("こんにちは")
+                .padding()
+                .background(.white)
+                .cornerRadius(30)
+            VStack(alignment: .trailing){
+                Text("既読")
+                Text(timeStamp)
+            }
+            
         }
         .padding(.bottom)
+    }
+    private var timeStamp: String{
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: Date())
     }
 }
 
 #Preview {
     MessageRow()
+        .background(.cyan)
 }
